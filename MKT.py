@@ -140,12 +140,12 @@ with tab1:
             st.plotly_chart(fig,use_container_width=True)
         with t2:
             counts=filtered_df['iso_alpha1'].value_counts().reset_index()
-            fig = px.choropleth(counts, locations='index', locationmode='ISO-3', color='iso_alpha1', 
+            fig = px.choropleth(counts, locations='count', locationmode='ISO-3', color='iso_alpha1', 
                     color_continuous_scale='YlOrRd')
             st.plotly_chart(fig,use_container_width=True)
         with t3:
             counts=filtered_df['iso_alpha'].value_counts().reset_index()
-            fig = px.choropleth(counts, locations='index', locationmode='ISO-3', color='iso_alpha', 
+            fig = px.choropleth(counts, locations='count', locationmode='ISO-3', color='iso_alpha', 
                     color_continuous_scale='YlOrRd')
             st.plotly_chart(fig,use_container_width=True)
         with t4:
