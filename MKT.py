@@ -511,13 +511,6 @@ if uploaded_files:
                 t0,tb,tLT,tLOS = st.tabs(['**LMvsTM**','**Pivot by Booked**','**Pivot by LT**','**Pivot by LOS**'])
                 with t0:
                     st.markdown('**LMvsTM**')
-                    book_status = all2['Booking Status'].unique()
-
-                    selected_bs = st.multiselect('Select Booking status. ', book_status, default=[], key='books_select')
-                    if selected_bs:
-                        filtered_df = filtered_df[filtered_df['Booking Status'].isin(selected_bs)]
-                    else:
-                        filtered_df = filtered_df
                     t1,t_reatecode,t_acce,t_utm_content= st.tabs(['Total revenue (Room type)','Total revenue by rate code','Total revenue by Access code','Total revenue by utm'])
                     with t1: 
                             t1,t2 = st.tabs(['sum','count'])
